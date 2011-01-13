@@ -1,0 +1,10 @@
+# # source .bash.d definitions
+# ## This is needed so that the @() magic below works
+# source ~/.bash.d/000-default
+# if [ -d ~/.bash.d -a -r ~/.bash.d -a \
+#      -x ~/.bash.d ]; then
+# 	for i in ~/.bash.d/*; do
+#             [[ ${i##*/} != @(*~|*.bak|*.swp|\#*\#|*.dpkg*|*.rpm@(orig|new|save)) ]] && [ \( -f $i -o -h $i \) -a -r $i ] && . $i
+# 	done
+# fi
+# unset i
