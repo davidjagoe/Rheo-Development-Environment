@@ -26,7 +26,6 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/rst-mode")
 (add-to-list 'load-path "~/.emacs.d/puppet-mode")
-(add-to-list 'load-path "~/opt/google-weather-el")
 
 ;;; Requires
 (require 'graphviz-dot-mode)
@@ -35,7 +34,6 @@
 (require 'rst)
 (require 'puppet-mode)
 (require 'espresso)
-(require 'org-google-weather)
 ;; (require 'jabber-autoloads)
 
 ;;; Clojure
@@ -56,8 +54,6 @@
        ("\\<comp\\>" ?∘)
        ("\\<partial\\>" ?þ)
        ("\\<complement\\>" ?¬)))))
-
-;; Google-weather for org-mode
 
 ;;; Auto modes
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
@@ -81,6 +77,7 @@
 ;;; Org-mode setup
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-todo-keywords '("TODO" "STARTED" "WAITING" "DONE"))
+(setq org-clock-modeline-total (quote current))
 (setq org-agenda-include-diary t)
 (setq org-return-follows-link t)
 (setq org-log-done t)
@@ -109,7 +106,7 @@
 
 ;;; Remember mode setup
 (org-remember-insinuate)
-(setq org-directory "~/Organiser")
+(setq org-directory "~/Organizer")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cr" 'org-remember)
 
@@ -162,10 +159,10 @@ table determines which characters these are."
 ;;; interfacing with ELPA, the package archive.
 ;;; Move this code earlier if you want to reference
 ;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
+;; (when
+;;     (load
+;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
+;;   (package-initialize))
 
 ;;; Custom
 (custom-set-variables
@@ -177,7 +174,7 @@ table determines which characters these are."
  '(indent-tabs-mode nil)
  '(mouse-wheel-progressive-speed nil)
  '(org-agenda-custom-commands (quote (("d" todo #("DONE" 0 4 (face org-warning)) nil))))
- '(org-agenda-files (quote ("~/Organiser/")))
+ '(org-agenda-files (quote ("~/Organizer/")))
  '(org-agenda-skip-scheduled-if-done nil)
  '(rst-mode-lazy nil)
  '(show-paren-mode t)

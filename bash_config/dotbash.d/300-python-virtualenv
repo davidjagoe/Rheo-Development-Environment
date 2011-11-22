@@ -1,5 +1,5 @@
 source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/NotBackedUp/VirtualEnvs
+export WORKON_HOME=~/Python-Envs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 export PIP_REQUIRE_VIRTUALENV=true
