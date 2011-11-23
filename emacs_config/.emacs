@@ -159,10 +159,14 @@ table determines which characters these are."
 ;;; interfacing with ELPA, the package archive.
 ;;; Move this code earlier if you want to reference
 ;;; packages in your .emacs.
-;; (when
-;;     (load
-;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
-;;   (package-initialize))
+(when
+    (load
+     (expand-file-name "~/.emacs.d/package.el"))
+  (package-initialize))
+
+(setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
 
 ;;; Custom
 (custom-set-variables
