@@ -1,2 +1,16 @@
-Various configuration files for a Rheo Systems development environment.
+Various configuration files for my development environment.
 
+1. Clone this repository
+
+2. Symlink the following:
+
+$HOME/.emacs.d  -> REPO/emacs_config
+$HOME/.emacs    -> REPO/emacs_config/.emacs
+$HOME/.bashrc.d -> REPO/bash_config/dotbash.d
+$HOME/.bashrc   -> REPO/bash_config/dotbash.d
+
+3. Install python virtualenvwrapper
+
+3.1 sudo apt-get install pip
+3.2 sudo pip install virtualenvwrapper
+3.3 Follow the instructions here http://www.doughellmann.com/docs/virtualenvwrapper/
